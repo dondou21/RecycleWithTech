@@ -1,0 +1,321 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Make the header green and fixed at the top */
+header {
+    background-color: rgb(143, 184, 247);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 10px; */
+    z-index: 1000;
+}
+
+/* Style the logo */
+
+.logo {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start; /* Ensures it aligns to the left */
+}
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Style the navigation bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #0a24b4;
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+/* Hero Section (with lower z-index) */
+.hero {
+    background: url('/static/images/collection.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Lowered */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="file"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* New update */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+ }
+ 
+ nav a {
+    color: black;
+    margin-left: 20px;
+ }
+ 
+ .logo {
+    float: left;
+    padding: 10px;
+ }
+
+ section {
+    margin: 100px 0;
+ }
+ 
+ .fixed-section {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 250px;
+ }
+
+ /* features sections */
+
+
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff; /* Or any blue shade to match the theme */
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 16px;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Features Section (with higher z-index and margin) */
+.features {
+    z-index: 20;
+    position: relative;
+    margin-top: 820px; /* Added margin to avoid overlap */
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Ensure Correct Image Paths */
+.feature-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure images fit within their containers */
+}
+
+/* Container for buttons */
+.button-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Primary button style */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Secondary button style */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+ 
